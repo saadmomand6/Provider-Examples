@@ -29,12 +29,50 @@ class MyApp extends StatelessWidget {
             title: 'Provider With MVVM and Rest APIs',
             themeMode: themechanger.thememode,
             theme: ThemeData(
-              brightness: Brightness.light,
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-              useMaterial3: true,
+              brightness: Brightness.dark,
+              primaryColor: Colors.red[800],
+              fontFamily: 'Inter',
+              textTheme: TextTheme(
+                headlineLarge: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: MediaQuery.of(context).size.height * 0.024),
+                headlineMedium: TextStyle(
+                    color: const Color(0xffFFEEA8),
+                    fontSize: MediaQuery.of(context).size.height * 0.020,
+                    fontWeight: FontWeight.w400),
+                bodySmall: TextStyle(
+                    color: Colors.brown,
+                    fontWeight: FontWeight.w400,
+                    fontSize: MediaQuery.of(context).size.height * 0.016),
+                labelLarge: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: MediaQuery.of(context).size.height * 0.020),
+              ),
             ),
-            darkTheme:
-                ThemeData(useMaterial3: true, brightness: Brightness.dark),
+            darkTheme: ThemeData(
+              useMaterial3: true,
+              brightness: Brightness.dark,
+              textTheme: TextTheme(
+                headlineLarge: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: MediaQuery.of(context).size.height * 0.024),
+                headlineMedium: TextStyle(
+                    color: const Color(0xffFFEEA8),
+                    fontSize: MediaQuery.of(context).size.height * 0.020,
+                    fontWeight: FontWeight.w400),
+                bodySmall: TextStyle(
+                    color: Colors.orange,
+                    fontWeight: FontWeight.w400,
+                    fontSize: MediaQuery.of(context).size.height * 0.032),
+                labelLarge: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                    fontSize: MediaQuery.of(context).size.height * 0.020),
+              ),
+            ),
             home: const DarkTheme(),
           );
         },

@@ -24,7 +24,8 @@ class _DarkThemeState extends State<DarkTheme> {
               value: ThemeMode.light,
               groupValue: themechanger.thememode,
               onChanged: themechanger.setTheme,
-              title: Text('Light Mode')),
+              title: Text('Light Mode',
+                  style: Theme.of(context).textTheme.bodySmall)),
           RadioListTile<ThemeMode>(
               value: ThemeMode.dark,
               groupValue: themechanger.thememode,

@@ -11,6 +11,21 @@ class DarkTheme extends StatefulWidget {
 }
 
 class _DarkThemeState extends State<DarkTheme> {
+  bool switchvalue = false;
+  void toggleSwitch(bool value) {
+    if (switchvalue == false) {
+      setState(() {
+        switchvalue = true;
+        ThemeMode.dark;
+      });
+    } else {
+      setState(() {
+        switchvalue = false;
+        ThemeMode.light;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final themechanger = Provider.of<ThemeChanger>(context);
@@ -31,6 +46,14 @@ class _DarkThemeState extends State<DarkTheme> {
               groupValue: themechanger.thememode,
               onChanged: themechanger.setTheme,
               title: Text('Dark Mode')),
+          Switch(
+            value: themechanger.thememode == ThemeMode.dark,
+            onChanged: themechanger.switchsetTheme,
+            activeColor: const Color.fromARGB(255, 197, 155, 206),
+            activeTrackColor: const Color(0xff5E5E5E),
+            inactiveThumbColor: const Color.fromARGB(255, 113, 77, 121),
+            inactiveTrackColor: const Color(0xff5E5E5E),
+          ),
           //   RadioListTile<ThemeMode>(
           //       value: ThemeMode.system,
           //       groupValue: themechanger.thememode,

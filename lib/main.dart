@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
             title: 'Provider With MVVM and Rest APIs',
             themeMode: themechanger.thememode,
             theme: ThemeData(
-              brightness: Brightness.dark,
+              brightness: Brightness.light,
               primaryColor: Colors.red[800],
               fontFamily: 'Inter',
               textTheme: TextTheme(

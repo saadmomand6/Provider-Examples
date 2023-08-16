@@ -8,4 +8,9 @@ class ThemeChanger with ChangeNotifier {
     _thememode = thememode;
     notifyListeners();
   }
+
+  void switchsetTheme(bool isdark) {
+    _thememode = isdark ? ThemeMode.dark : ThemeMode.light;
+    notifyListeners();
+  }
 }

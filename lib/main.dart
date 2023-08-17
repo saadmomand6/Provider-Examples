@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider_with_mvvm_and_rest_apis/provider/count_provider.dart';
 import 'package:provider_with_mvvm_and_rest_apis/provider/favourite_provider.dart';
+import 'package:provider_with_mvvm_and_rest_apis/provider/login_auth_provider.dart';
 import 'package:provider_with_mvvm_and_rest_apis/provider/multiprovider_example.dart';
 import 'package:provider_with_mvvm_and_rest_apis/provider/theme_changer_provider.dart';
-import 'package:provider_with_mvvm_and_rest_apis/screens/dark_theme.dart';
+import 'package:provider_with_mvvm_and_rest_apis/screens/login_api_provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => MultipleProviderExample()),
         ChangeNotifierProvider(create: (_) => Favouriteitem()),
         ChangeNotifierProvider(create: (_) => ThemeChanger()),
+        ChangeNotifierProvider(create: (_) => LoginAuth()),
       ],
       child: Builder(
         builder: (BuildContext context) {
@@ -73,7 +75,8 @@ class MyApp extends StatelessWidget {
                     fontSize: MediaQuery.of(context).size.height * 0.020),
               ),
             ),
-            home: const DarkTheme(),
+            // home: const DarkTheme(),
+            home: const LoginScreen(),
           );
         },
       ),

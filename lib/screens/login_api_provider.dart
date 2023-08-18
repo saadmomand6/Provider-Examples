@@ -36,18 +36,17 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             TextFormField(
               controller: password,
-              obscureText: obsecure,
+              obscureText: loginauthprovider.obs,
               decoration: InputDecoration(
                   hintText: 'Password',
                   suffix: Consumer<LoginAuth>(
                     builder: (context, value, child) {
                       return IconButton(
                           onPressed: () {
-                            value.setobsecure(obsecure);
+                            obsecure = !obsecure;
+                            loginauthprovider.setobsecure(obsecure);
                           },
-                          icon: Icon(loginauthprovider.obscure
-                              ? Icons.password
-                              : Icons.lock));
+                          icon: Icon(value.obs ? Icons.password : Icons.lock));
                     },
                   )),
             ),

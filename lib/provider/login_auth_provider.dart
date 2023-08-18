@@ -10,11 +10,11 @@ class LoginAuth with ChangeNotifier {
     notifyListeners();
   }
 
-  bool _obscure = false;
-  bool get obscure => _obscure;
+  bool _obs = false;
+  bool get obs => _obs;
 
-  setobsecure(bool value) {
-    _obscure = value;
+  setobsecure(bool values) {
+    _obs = values;
     notifyListeners();
   }
 

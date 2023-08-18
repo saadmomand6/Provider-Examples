@@ -13,7 +13,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
-  bool obsecure = true;
+  bool obsecure = false;
   @override
   Widget build(BuildContext context) {
     final loginauthprovider = Provider.of<LoginAuth>(context);
